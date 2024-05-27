@@ -26,7 +26,7 @@ Slurm lets you do manual pinning, with the options --cpu_bind=map_cpu, and --cpi
 srun -n 2 --cpu_bind=mask_cpu:0x3,0xC
 ```
 
-spawns two tasks pinned to cores 0 and 1 (0x3 = 3 = 20 + 21) and cores 2 and 3 (0xC = 11 = 22 + 23), respectively.
+spawns two tasks pinned to cores 0 and 1 (0x3 = 3 = 2^0^ + 2^1^) and cores 2 and 3 (0xC = 11 = 2^2^ + 2^3^), respectively.
 
 To write those pinnings by hand, in a big machine, is a PITA. So I wrote this little script. 
 
